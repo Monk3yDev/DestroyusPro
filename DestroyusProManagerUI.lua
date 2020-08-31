@@ -87,9 +87,9 @@ function _DestroyusProManagerUI.OnEnterCallbackItemManager(self)
 end
 
 -- Manage adding and removing item during on click callback
-function _DestroyusProManagerUI.ManageBlackList(commandType)
+function _DestroyusProManagerUI.ManageActiveList(commandType)
     if _DestroyusProManagerUI.displayItemLink then
-        _DestroyusProItems.ManageBlackList(_DestroyusProManagerUI.displayItemLink, commandType)
+        _DestroyusProItems.ManageActiveList(_DestroyusProManagerUI.displayItemLink, commandType)
     else
         _DestroyusProUtils.Print("Item slot is empty. Please select one from inventory")
     end

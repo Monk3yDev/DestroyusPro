@@ -134,6 +134,9 @@ function _DestroyusProManager.LoadAddonData(self, event, addonName)
         if _G["DestroyusProBlackList"] == nil then
             _DestroyusProItems.InitBlackList()
         end
+        if _G["DestroyusProWhiteList"] == nil then
+            _DestroyusProItems.InitWhiteList()
+        end    
         if _G["DestroyusProSpellsID"] == nil then
             _DestroyusProTradeSkill.InitGlobalVariables()
         end

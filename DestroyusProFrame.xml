@@ -36,7 +36,7 @@
         </Backdrop>
         <Layers>
           <Layer level="ARTWORK">
-            <FontString text="DestroyusPro 1.0.0" inherits="GameFontNormalLarge">
+            <FontString text="DestroyusPro 1.1.0" inherits="GameFontNormalLarge">
               <Anchors>
                 <Anchor point="TOPLEFT"/>
                 <Anchor point="BOTTOMRIGHT"/>
@@ -90,6 +90,28 @@
               </OnClick>
               <OnShow>
                 self:SetChecked(not _G["DestroyusProPrintOutState"])
+              </OnShow>
+            </Scripts>
+          </CheckButton >
+          <CheckButton inherits="UICheckButtonTemplate">
+            <Anchors>
+              <Anchor point="TOP" x="-20" y="-4" />
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <FontString inherits="GameFontNormal" text="Enable White List">
+                  <Anchors>
+                    <Anchor point="LEFT" x="32" y="0"/>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <Scripts>
+              <OnClick>
+                _G["DestroyusProWhiteList"]["activated"] = self:GetChecked()
+              </OnClick>
+              <OnShow>
+                self:SetChecked(_G["DestroyusProWhiteList"]["activated"])
               </OnShow>
             </Scripts>
           </CheckButton >
@@ -394,7 +416,7 @@
             </FontString>
           </Layer>
           <Layer level="ARTWORK">
-            <FontString inherits="GameFontWhite" text="Add or Remove item from Blacklist">
+            <FontString inherits="GameFontWhite" text="Add or Remove item from active list">
               <Anchors>
                 <Anchor point="TOPLEFT" x="8" y="-218"/>
               </Anchors>
@@ -433,7 +455,7 @@
         </Anchors>
         <Scripts>
           <OnClick>
-            _DestroyusProManagerUI.ManageBlackList(_DestroyusProCommandType.ADD_ITEM)
+            _DestroyusProManagerUI.ManageActiveList(_DestroyusProCommandType.ADD_ITEM)
           </OnClick>
         </Scripts>
       </Button>
@@ -444,7 +466,7 @@
         </Anchors>
         <Scripts>
           <OnClick>
-            _DestroyusProManagerUI.ManageBlackList(_DestroyusProCommandType.REMOVE_ITEM)
+            _DestroyusProManagerUI.ManageActiveList(_DestroyusProCommandType.REMOVE_ITEM)
           </OnClick>
         </Scripts>
       </Button>

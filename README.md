@@ -30,10 +30,13 @@ To use properly mass techniques "calibration" of the actual learned recipes must
 
 ## Disenchanting
 
-- Skip items from the blacklist
 - Skip items which are part of set saved in EquipmentManger
 - Skip items from unwanted quality
-- ItemID can be added or removed from blacklist in addon panel by drag and drop item from inventory
+- Skip items from the blacklist (default list)
+- When whitelist is active disenchanting will be performed only on items from this list
+- Whitelist is activated per character
+- Blacklist is activated in global scope
+- ItemID can be added or removed from blacklist/whitelist in addon panel by drag and drop item from inventory
 
 ## How open addon panel
 

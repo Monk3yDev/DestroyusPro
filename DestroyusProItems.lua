@@ -93,11 +93,34 @@ function _DestroyusProItems.IsItemQualityAllowed(quality)
        _G["DestroyusProItemQualityValue"]["epic"] == quality
 end
 
--- Check if itemID exist in black list
+-- Check if white list is activated
+function _DestroyusProItems.IsWhiteListActivated()
+    return _G["DestroyusProWhiteList"]["activated"]
+end
+
+-- Get current active list depending of settings
+function _DestroyusProItems.GetActiveList()
+    if _DestroyusProItems.IsWhiteListActivated() == false then
+        return _G["DestroyusProBlackList"]
+    end
+    return _G["DestroyusProWhiteList"]["itemList"]
+end
+
+-- Check if itemID from specific list can take part in disenchanting
 function _DestroyusProItems.IsItemOnList(itemID)
-    local blackList = _G["DestroyusProBlackList"]
-    for	i = 1, #blackList do
-        if itemID == blackList[i] then
+    local activeList = _DestroyusProItems.GetActiveList()
+    if _DestroyusProItems.IsWhiteListActivated() == false then
+        -- Black list allow only itemID which does not exist on the list
+        return _DestroyusProItems.IsItemOnActiveList(activeList, itemID) == false
+    end
+    -- White list allow only itemID which are on the list
+    return _DestroyusProItems.IsItemOnActiveList(activeList, itemID) == true
+end
+
+-- Check if itemID exist in black list or white list
+function _DestroyusProItems.IsItemOnActiveList(activeList, itemID)
+    for	i = 1, #activeList do
+        if itemID == activeList[i] then
             return true
         end
     end
@@ -105,30 +128,34 @@ function _DestroyusProItems.IsItemOnList(itemID)
 end
 
 -- Manage black list depending on commandType
-function _DestroyusProItems.ManageBlackList(itemLink, commandType)
+function _DestroyusProItems.ManageActiveList(itemLink, commandType)
     local itemID = GetItemInfoInstant(itemLink)
     local itemIndex = nil
-    local blackList = _G["DestroyusProBlackList"]
+    local activeList = _DestroyusProItems.GetActiveList()
+    local listName = "black"
+    if _DestroyusProItems.IsWhiteListActivated() then
+        listName = "white"
+    end
     if itemID then
-        for	i = 1, #blackList do
-            if itemID == blackList[i] then
+        for	i = 1, #activeList do
+            if itemID == activeList[i] then
                 itemIndex = i
                 break
             end
         end
         if commandType == _DestroyusProCommandType.ADD_ITEM then
             if itemIndex then
-                _DestroyusProUtils.Print(string.format("Item %s is already on the black list", itemLink))
+                _DestroyusProUtils.Print(string.format("Item %s is already on the %s list", itemLink, listName))
             else
-                _DestroyusProUtils.Print(string.format("Adding %s to the black list", itemLink))
-                table.insert(_G["DestroyusProBlackList"], itemID)
+                _DestroyusProUtils.Print(string.format("Adding %s to the %s list", itemLink, listName))
+                table.insert(activeList, itemID)
             end
         elseif commandType == _DestroyusProCommandType.REMOVE_ITEM then
             if itemIndex then
-                _DestroyusProUtils.Print(string.format("Removing %s item from the black list", itemLink))
-                table.remove(_G["DestroyusProBlackList"], itemIndex)
+                _DestroyusProUtils.Print(string.format("Removing %s item from the %s list", itemLink, listName))
+                table.remove(activeList, itemIndex)
             else
-                _DestroyusProUtils.Print(string.format("Item %s is already removed from the black list", itemLink))
+                _DestroyusProUtils.Print(string.format("Item %s is already removed from the %s list", itemLink, listName))
             end
         end
     else
@@ -138,7 +165,7 @@ end
 
 -- Main check based of classID and subClassID with itemEquipLocalization
 -- Let's skip locked items
--- Let's skip items ID from black list
+-- Let's skip items ID from black list or allow only items ID from white list
 -- Let's skip items which are part of the set
 function _DestroyusProItems.IsItemForDisenchanting(bagID, slotIndex)
     local itemLocation = ItemLocation:CreateFromBagAndSlot(bagID, slotIndex)
@@ -148,7 +175,7 @@ function _DestroyusProItems.IsItemForDisenchanting(bagID, slotIndex)
         return _DestroyusProItems.IsItemQualityAllowed(C_Item.GetItemQuality(itemLocation)) and
             C_Item.IsLocked(itemLocation) == false and
             _DestroyusProItems.IsItem(classID, subClassID, itemEquipLoc) and
-            _DestroyusProItems.IsItemOnList(itemID) == false and
+            _DestroyusProItems.IsItemOnList(itemID) and
             _DestroyusProItems.IsPartOfSet(bagID, slotIndex) == false
     end
 end
