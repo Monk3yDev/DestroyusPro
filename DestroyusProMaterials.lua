@@ -4,6 +4,14 @@ function _DestroyusProAddMaterial(materialList, _itemID, _itemName, _massSpellID
 end
 
 _DestroyusProHerbs = {}
+-- Shadowlands
+_DestroyusProAddMaterial(_DestroyusProHerbs, 169701, "Death Blossom", _DestroyusProSpellID.MASS_MILL_DEATHBLOSSOM, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProHerbs, 168589, "Marrowroot", _DestroyusProSpellID.MASS_MILL_MARROWROOT, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProHerbs, 168586, "Rising Glory", _DestroyusProSpellID.MASS_MILL_RISINGGLORY, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProHerbs, 170554, "Vigil's Torch", _DestroyusProSpellID.MASS_MILL_VIGILTORCH, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProHerbs, 168583, "Widowbloom", _DestroyusProSpellID.MASS_MILL_WIDOWBLOOM, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProHerbs, 171315, "Nightshade", _DestroyusProSpellID.MASS_MILL_NIGHTSHADE, _DestroyusProExpansionID.SHADOWLANDS)
+
 -- Battle for Azeroth
 _DestroyusProAddMaterial(_DestroyusProHerbs, 152510, "Anchor Weed", _DestroyusProSpellID.MASS_MILL_ANCHORWEED, _DestroyusProExpansionID.BFA)
 _DestroyusProAddMaterial(_DestroyusProHerbs, 152505, "Riverbud", _DestroyusProSpellID.MASS_MILL_RIVERBUD, _DestroyusProExpansionID.BFA)
@@ -93,6 +101,14 @@ _DestroyusProAddMaterial(_DestroyusProHerbs, 89639, "Desecrated Herb", nil, _Des
 
 -- Ore 
 _DestroyusProOres = {}
+-- Shadowlands
+_DestroyusProAddMaterial(_DestroyusProOres, 171828, "Laestrite Ore", _DestroyusProSpellID.MASS_PROSPECT_LAESTRITE, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProOres, 171830, "Oxxein Ore", _DestroyusProSpellID.MASS_PROSPECT_OXXEIN, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProOres, 171831, "Phaedrum Ore", _DestroyusProSpellID.MASS_PROSPECT_PHAEDRUM, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProOres, 171832, "Sinvyr Ore", _DestroyusProSpellID.MASS_PROSPECT_SINVYR, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProOres, 171829, "Solenium Ore", _DestroyusProSpellID.MASS_PROSPECT_SOLENIUM, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProOres, 171833, "Elethium Ore", _DestroyusProSpellID.MASS_PROSPECT_ELETHIUM, _DestroyusProExpansionID.SHADOWLANDS)
+
 -- Battle for Azeroth
 _DestroyusProAddMaterial(_DestroyusProOres, 152513, "Platinum Ore", _DestroyusProSpellID.MASS_PROSPECT_PLATINUM, _DestroyusProExpansionID.BFA)
 _DestroyusProAddMaterial(_DestroyusProOres, 152512, "Monelite Ore", _DestroyusProSpellID.MASS_PROSPECT_MONELITE, _DestroyusProExpansionID.BFA)

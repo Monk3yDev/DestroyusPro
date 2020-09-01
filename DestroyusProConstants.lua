@@ -1,7 +1,8 @@
 _DestroyusProExpansionID = {}
-_DestroyusProExpansionID.BFA = 1
+_DestroyusProExpansionID.OTHER = 1
 _DestroyusProExpansionID.LEGION = 2
-_DestroyusProExpansionID.OTHER = 3
+_DestroyusProExpansionID.BFA = 3
+_DestroyusProExpansionID.SHADOWLANDS = 4
 
 _DestroyusProStackSize = {}
 _DestroyusProStackSize.CLASSIC = 5
@@ -45,6 +46,22 @@ _DestroyusProSpellID.MASS_PROSPECT_STORMSILVER = 256613
 _DestroyusProSpellID.MASS_PROSPECT_MONELITE = 256611
 _DestroyusProSpellID.MASS_PROSPECT_OSMENITE = 300619
 
+-- Shadowlands Mass Milling
+_DestroyusProSpellID.MASS_MILL_DEATHBLOSSOM = 311413
+_DestroyusProSpellID.MASS_MILL_MARROWROOT = 311416
+_DestroyusProSpellID.MASS_MILL_RISINGGLORY = 311417
+_DestroyusProSpellID.MASS_MILL_VIGILTORCH = 311414
+_DestroyusProSpellID.MASS_MILL_WIDOWBLOOM = 311415
+_DestroyusProSpellID.MASS_MILL_NIGHTSHADE = 311418
+
+-- Shadowlands Mass Prospecting
+_DestroyusProSpellID.MASS_PROSPECT_LAESTRITE = 311948
+_DestroyusProSpellID.MASS_PROSPECT_OXXEIN = 311950
+_DestroyusProSpellID.MASS_PROSPECT_PHAEDRUM = 311951
+_DestroyusProSpellID.MASS_PROSPECT_SINVYR = 311952
+_DestroyusProSpellID.MASS_PROSPECT_SOLENIUM = 311949
+_DestroyusProSpellID.MASS_PROSPECT_ELETHIUM = 311953
+
 -- Additional frame types. Needed during creation action for macro
 _DestroyusProFrameType = {}
 _DestroyusProFrameType.MACRO = 1
@@ -59,6 +76,8 @@ _DestroyusProButtonName.MASS_MILLING_LEGION = "ClickMeForWorkMassMillingLegion"
 _DestroyusProButtonName.MASS_PROSPECTING_LEGION = "ClickMeForWorkMassProspectingLegion"
 _DestroyusProButtonName.MASS_MILLING_AZEROTH = "ClickMeForWorkMassMillingAzeroth"
 _DestroyusProButtonName.MASS_PROSPECTING_AZEROTH = "ClickMeForWorkMassProspectingAzeroth"
+_DestroyusProButtonName.MASS_MILLING_SHADOWLANDS = "ClickMeForWorkMassMillingShadowlands"
+_DestroyusProButtonName.MASS_PROSPECTING_SHADOWLANDS = "ClickMeForWorkMassProspectingShadowlands"
 
 -- Commands type
 _DestroyusProCommandType = {}

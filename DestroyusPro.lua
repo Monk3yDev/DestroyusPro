@@ -140,6 +140,7 @@ function _DestroyusProManager.LoadAddonData(self, event, addonName)
         if _G["DestroyusProSpellsID"] == nil then
             _DestroyusProTradeSkill.InitGlobalVariables()
         end
+        _DestroyusProTradeSkill.InitShadowlandsVariables()
         _DestroyusProManager.PrettyLoadMessage()
     end
 end
@@ -401,15 +402,19 @@ _DestroyusProManager.CreateCustomFrame("MassWork", _DestroyusProMain.MassWorkCal
 -- Create Macro frames
 _DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MILLING, _DestroyusProFrameType.MACRO,
                                        _DestroyusProSpellID.MILLING, _DestroyusProTradeSkill.INSCRIPTION)
- _DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.DISENCHANTING, _DestroyusProFrameType.MACRO,
-                                       _DestroyusProSpellID.DISENCHANT, _DestroyusProTradeSkill.ENCHANTING)
- _DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.PROSPECTING, _DestroyusProFrameType.MACRO,
-                                       _DestroyusProSpellID.PROSPECTING, _DestroyusProTradeSkill.JEWELCRAFTING)
- _DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_MILLING_LEGION, _DestroyusProFrameType.BUTTON,
-                                       _DestroyusProSpellID.MILLING, _DestroyusProTradeSkill.INSCRIPTION, _DestroyusProExpansionID.LEGION)
- _DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_PROSPECTING_LEGION, _DestroyusProFrameType.BUTTON,
-                                       _DestroyusProSpellID.PROSPECTING, _DestroyusProTradeSkill.JEWELCRAFTING, _DestroyusProExpansionID.LEGION)
- _DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_MILLING_AZEROTH, _DestroyusProFrameType.BUTTON,
-                                       _DestroyusProSpellID.MILLING, _DestroyusProTradeSkill.INSCRIPTION, _DestroyusProExpansionID.BFA)
- _DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_PROSPECTING_AZEROTH, _DestroyusProFrameType.BUTTON,
-                                       _DestroyusProSpellID.PROSPECTING, _DestroyusProTradeSkill.JEWELCRAFTING, _DestroyusProExpansionID.BFA)
+_DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.DISENCHANTING, _DestroyusProFrameType.MACRO,
+                                    _DestroyusProSpellID.DISENCHANT, _DestroyusProTradeSkill.ENCHANTING)
+_DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.PROSPECTING, _DestroyusProFrameType.MACRO,
+                                    _DestroyusProSpellID.PROSPECTING, _DestroyusProTradeSkill.JEWELCRAFTING)
+_DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_MILLING_LEGION, _DestroyusProFrameType.BUTTON,
+                                    _DestroyusProSpellID.MILLING, _DestroyusProTradeSkill.INSCRIPTION, _DestroyusProExpansionID.LEGION)
+_DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_PROSPECTING_LEGION, _DestroyusProFrameType.BUTTON,
+                                    _DestroyusProSpellID.PROSPECTING, _DestroyusProTradeSkill.JEWELCRAFTING, _DestroyusProExpansionID.LEGION)
+_DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_MILLING_AZEROTH, _DestroyusProFrameType.BUTTON,
+                                    _DestroyusProSpellID.MILLING, _DestroyusProTradeSkill.INSCRIPTION, _DestroyusProExpansionID.BFA)
+_DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_PROSPECTING_AZEROTH, _DestroyusProFrameType.BUTTON,
+                                    _DestroyusProSpellID.PROSPECTING, _DestroyusProTradeSkill.JEWELCRAFTING, _DestroyusProExpansionID.BFA)
+_DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_MILLING_SHADOWLANDS, _DestroyusProFrameType.BUTTON,
+                                    _DestroyusProSpellID.MILLING, _DestroyusProTradeSkill.INSCRIPTION, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProManager.CreateMacroFrame(_DestroyusProButtonName.MASS_PROSPECTING_SHADOWLANDS, _DestroyusProFrameType.BUTTON,
+                                    _DestroyusProSpellID.PROSPECTING, _DestroyusProTradeSkill.JEWELCRAFTING, _DestroyusProExpansionID.SHADOWLANDS)

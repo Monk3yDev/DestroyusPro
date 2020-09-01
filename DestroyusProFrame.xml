@@ -2,7 +2,7 @@
 ..\..\FrameXML\UI.xsd">
   <Script file="DestroyusProManagerUI.lua"/>
   <Frame name="_DestroyusProManagerFrame" parent="UIParent" hidden="true" frameStrata="BACKGROUND">
-    <Size x="500" y="408"/>
+    <Size x="500" y="438"/>
     <Anchors>
       <Anchor point="CENTER"/>
     </Anchors>
@@ -21,7 +21,7 @@
       <Frame name="_DestroyusProTitleFrame" parent="_DestroyusProManagerFrame">
         <Anchors>
           <Anchor point="TOPLEFT" x="8" y="-8"/>
-          <Anchor point="BOTTOMRIGHT" x="-8" y="360"/>
+          <Anchor point="BOTTOMRIGHT" x="-8" y="390"/>
         </Anchors>
         <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
           <EdgeSize>
@@ -380,9 +380,65 @@
               </OnEvent>
             </Scripts>
           </CheckButton >
+                    <CheckButton inherits="UICheckButtonTemplate">
+            <Anchors>
+              <Anchor point="TOPLEFT" x="4" y="-198" />
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <FontString inherits="GameFontNormal" text="Mass Milling Shadowlands">
+                  <Anchors>
+                    <Anchor point="LEFT" x="32" y="0"/>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <Scripts>
+              <OnClick>
+                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MASS_MILLING_SHADOWLANDS,
+                                                   _DestroyusProMacro.BLACK_BOWL,
+                                                   _DestroyusProButtonName.MASS_MILLING_SHADOWLANDS)
+              </OnClick>
+              <OnLoad>
+                _DestroyusProManagerUI.RegisterEvents(self)
+                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MASS_MILLING_SHADOWLANDS)
+              </OnLoad>
+              <OnEvent>
+                _DestroyusProManagerUI.OnEventCallback(self, event)
+              </OnEvent>
+            </Scripts>
+          </CheckButton >
+          <CheckButton inherits="UICheckButtonTemplate">
+            <Anchors>
+              <Anchor point="TOP" x="-20" y="-198" />
+            </Anchors>
+            <Layers>
+              <Layer level="ARTWORK">
+                <FontString inherits="GameFontNormal" text="Mass Prospecting Shadowlands">
+                  <Anchors>
+                   <Anchor point="LEFT" x="32" y="0"/>
+                  </Anchors>
+                </FontString>
+              </Layer>
+            </Layers>
+            <Scripts>
+              <OnClick>
+                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MASS_PROSPECTING_SHADOWLANDS,
+                                                   _DestroyusProMacro.WHITE_ROCKS,
+                                                   _DestroyusProButtonName.MASS_PROSPECTING_SHADOWLANDS)
+              </OnClick>
+              <OnLoad>
+                _DestroyusProManagerUI.RegisterEvents(self)
+                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MASS_PROSPECTING_SHADOWLANDS)
+              </OnLoad>
+              <OnEvent>
+                _DestroyusProManagerUI.OnEventCallback(self, event)
+              </OnEvent>
+            </Scripts>
+          </CheckButton >
           <Button name="DisplayIconButton" inherits="GiantItemButtonTemplate">
             <Anchors>
-              <Anchor point="TOPLEFT" x="8" y="-234" />
+              <Anchor point="TOPLEFT" x="8" y="-260" />
             </Anchors>
             <Scripts>
             <OnClick>
@@ -418,7 +474,7 @@
           <Layer level="ARTWORK">
             <FontString inherits="GameFontWhite" text="Add or Remove item from active list">
               <Anchors>
-                <Anchor point="TOPLEFT" x="8" y="-218"/>
+                <Anchor point="TOPLEFT" x="8" y="-240"/>
               </Anchors>
             </FontString>
           </Layer>

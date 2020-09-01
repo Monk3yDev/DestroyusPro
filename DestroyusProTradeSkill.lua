@@ -27,8 +27,20 @@ function _DestroyusProTradeSkill.InitGlobalVariables()
     _G["DestroyusProSpellsID"] = {}
     _G["DestroyusProSpellsID"]["MillLegion"] = {}
     _G["DestroyusProSpellsID"]["MillAzeroth"] = {}
+    _G["DestroyusProSpellsID"]["MillShadowlands"] = {}
     _G["DestroyusProSpellsID"]["ProspectingLegion"] = {}
     _G["DestroyusProSpellsID"]["ProspectingAzeroth"] = {}
+    _G["DestroyusProSpellsID"]["ProspectingShadowlands"] = {}
+end
+
+-- Init variables connected to Shadowlands expansion for already installed addons
+function _DestroyusProTradeSkill.InitShadowlandsVariables()
+    if _G["DestroyusProSpellsID"]["MillShadowlands"] == nil then
+        _G["DestroyusProSpellsID"]["MillShadowlands"] = {}
+    end
+    if _G["DestroyusProSpellsID"]["ProspectingShadowlands"] == nil then
+        _G["DestroyusProSpellsID"]["ProspectingShadowlands"] = {}
+    end
 end
 
 -- Collect all mass spells from activate profession
@@ -37,6 +49,8 @@ function _DestroyusProTradeSkill.CollectAllMassSpells()
     _DestroyusProTradeSkill.CollectMassWorkSpells(_DestroyusProExpansionID.LEGION, _DestroyusProTradeSkill.JEWELCRAFTING)
     _DestroyusProTradeSkill.CollectMassWorkSpells(_DestroyusProExpansionID.BFA, _DestroyusProTradeSkill.JEWELCRAFTING)
     _DestroyusProTradeSkill.CollectMassWorkSpells(_DestroyusProExpansionID.BFA, _DestroyusProTradeSkill.INSCRIPTION)
+    _DestroyusProTradeSkill.CollectMassWorkSpells(_DestroyusProExpansionID.SHADOWLANDS, _DestroyusProTradeSkill.JEWELCRAFTING)
+    _DestroyusProTradeSkill.CollectMassWorkSpells(_DestroyusProExpansionID.SHADOWLANDS, _DestroyusProTradeSkill.INSCRIPTION)
 end
 
 -- Perform action when player learned new spell
@@ -64,6 +78,13 @@ function _DestroyusProTradeSkill.SelectMassSpellTable(expansionID, professionID)
             return _G["DestroyusProSpellsID"]["ProspectingAzeroth"]
         elseif professionID == _DestroyusProTradeSkill.INSCRIPTION then
             return _G["DestroyusProSpellsID"]["MillAzeroth"]
+        end
+    end
+    if expansionID == _DestroyusProExpansionID.SHADOWLANDS then
+        if professionID == _DestroyusProTradeSkill.JEWELCRAFTING then
+            return _G["DestroyusProSpellsID"]["ProspectingShadowlands"]
+        elseif professionID == _DestroyusProTradeSkill.INSCRIPTION then
+            return _G["DestroyusProSpellsID"]["MillShadowlands"]
         end
     end
     -- This place should never happen.
@@ -120,6 +141,8 @@ function _DestroyusProTradeSkill.CallbackNewRecipeLearned(self, event, spellID)
         _DestroyusProTradeSkill.NewSpellAppear(spellID, _DestroyusProExpansionID.LEGION, _DestroyusProTradeSkill.JEWELCRAFTING)
         _DestroyusProTradeSkill.NewSpellAppear(spellID, _DestroyusProExpansionID.BFA, _DestroyusProTradeSkill.INSCRIPTION)
         _DestroyusProTradeSkill.NewSpellAppear(spellID, _DestroyusProExpansionID.BFA, _DestroyusProTradeSkill.JEWELCRAFTING)
+        _DestroyusProTradeSkill.NewSpellAppear(spellID, _DestroyusProExpansionID.SHADOWLANDS, _DestroyusProTradeSkill.INSCRIPTION)
+        _DestroyusProTradeSkill.NewSpellAppear(spellID, _DestroyusProExpansionID.SHADOWLANDS, _DestroyusProTradeSkill.JEWELCRAFTING)
     end
 end
 

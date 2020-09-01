@@ -10,6 +10,8 @@ _DestroyusProMacro.MASS_MILLING_LEGION = "DesProMMLegion"
 _DestroyusProMacro.MASS_PROSPECTING_LEGION = "DesProMPLegion"
 _DestroyusProMacro.MASS_MILLING_AZEROTH = "DesProMMAzeroth"
 _DestroyusProMacro.MASS_PROSPECTING_AZEROTH = "DesProMPAzeroth"
+_DestroyusProMacro.MASS_MILLING_SHADOWLANDS = "DesProMMShadowlands"
+_DestroyusProMacro.MASS_PROSPECTING_SHADOWLANDS = "DesProMPShadowlands"
 
 -- Macro Icons
 _DestroyusProMacro.BLUE_BOWL = "237032"
@@ -19,6 +21,8 @@ _DestroyusProMacro.SMALL_ROCK = "133287"
 _DestroyusProMacro.GROUP_OF_SMALL_ROCKS = "134119"
 _DestroyusProMacro.BOX_WITH_RED_DUST = "236995"
 _DestroyusProMacro.BROWN_DUST = "133208"
+_DestroyusProMacro.BLACK_BOWL = "1500969"
+_DestroyusProMacro.WHITE_ROCKS = "961625"
 
 -- Combat mode
 _DestroyusProMacro.isCombatModeOn = false

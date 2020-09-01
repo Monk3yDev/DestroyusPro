@@ -27,6 +27,8 @@ To use properly mass techniques "calibration" of the actual learned recipes must
 - Mass Prospect Battle for Azeroth - "DesProMPAzeroth": Prospect ores using learned mass prospect techniques
 - Mass Mill Legion - "DesProMMLegion": Mill herbs using learned mass mill techniques
 - Mass Prospect Legion - "DesProMPLegion": Prospect ores using learned mass prospect techniques
+- Mass Mill Shadowlands - "DesProMMShadowlands": Mill herbs using learned mass mill techniques
+- Mass Prospect Shadowlands - "DesProMPShadowlands": Prospect ores using learned mass prospect techniques
 
 ## Disenchanting
 
