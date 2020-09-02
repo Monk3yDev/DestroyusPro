@@ -131,10 +131,10 @@
             <Scripts>
               <OnClick>
                 _DestroyusProManagerUI.ChangeQualityDisenchanting(self:GetChecked(),
-                                                                  "uncommon", LE_ITEM_QUALITY_UNCOMMON)
+                                                                  "uncommon", Enum.ItemQuality.Good)
               </OnClick>
               <OnShow>
-                self:SetChecked(_G["DestroyusProItemQualityValue"]["uncommon"] == LE_ITEM_QUALITY_UNCOMMON)
+                self:SetChecked(_G["DestroyusProItemQualityValue"]["uncommon"] == Enum.ItemQuality.Good)
               </OnShow>
             </Scripts>
           </CheckButton >
@@ -154,10 +154,10 @@
             <Scripts>
               <OnClick>
                 _DestroyusProManagerUI.ChangeQualityDisenchanting(self:GetChecked(),
-                                                                  "rare", LE_ITEM_QUALITY_RARE)
+                                                                  "rare", Enum.ItemQuality.Superior)
               </OnClick>
               <OnShow>
-                self:SetChecked(_G["DestroyusProItemQualityValue"]["rare"] == LE_ITEM_QUALITY_RARE)
+                self:SetChecked(_G["DestroyusProItemQualityValue"]["rare"] == Enum.ItemQuality.Superior)
               </OnShow>
             </Scripts>
           </CheckButton >
@@ -177,10 +177,10 @@
             <Scripts>
               <OnClick>
                 _DestroyusProManagerUI.ChangeQualityDisenchanting(self:GetChecked(),
-                                                                  "epic", LE_ITEM_QUALITY_EPIC)
+                                                                  "epic", Enum.ItemQuality.Epic)
               </OnClick>
               <OnShow>
-                self:SetChecked(_G["DestroyusProItemQualityValue"]["epic"] == LE_ITEM_QUALITY_EPIC)
+                self:SetChecked(_G["DestroyusProItemQualityValue"]["epic"] == Enum.ItemQuality.Epic)
               </OnShow>
             </Scripts>
           </CheckButton >

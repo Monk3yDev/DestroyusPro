@@ -180,17 +180,13 @@ function _DestroyusProItems.IsItemForDisenchanting(bagID, slotIndex)
     end
 end
 
--- TODO Change in patch 9.0
--- LE_ITEM_QUALITY_UNCOMMON Enum.ItemQuality.Uncommon
--- LE_ITEM_QUALITY_RARE -> Enum.ItemQuality.Superior
--- LE_ITEM_QUALITY_EPIC -> Enum.ItemQuality.Epic
 -- Convert number to global strings
 function _DestroyusProItems.ItemQualityToString(quality)
-    if quality == LE_ITEM_QUALITY_UNCOMMON then
+    if quality == Enum.ItemQuality.Good then
         return ITEM_QUALITY2_DESC
-    elseif quality == LE_ITEM_QUALITY_RARE then
+    elseif quality == Enum.ItemQuality.Superior then
         return ITEM_QUALITY3_DESC
-    elseif quality == LE_ITEM_QUALITY_EPIC then
+    elseif quality == Enum.ItemQuality.Epic then
         return ITEM_QUALITY4_DESC
     end
     return ""

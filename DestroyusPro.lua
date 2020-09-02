@@ -96,15 +96,15 @@ end
 function _DestroyusProManager.PrettyLoadQuality()
     local msg = "Quality of items:"
     local allDisabled = true
-    if _G["DestroyusProItemQualityValue"]["uncommon"] == LE_ITEM_QUALITY_UNCOMMON then
+    if _G["DestroyusProItemQualityValue"]["uncommon"] == Enum.ItemQuality.Good then
        msg = msg.." *".._DestroyusProItems.ItemQualityToString(_G["DestroyusProItemQualityValue"]["uncommon"])
        allDisabled = false
     end
-    if _G["DestroyusProItemQualityValue"]["rare"] == LE_ITEM_QUALITY_RARE then
+    if _G["DestroyusProItemQualityValue"]["rare"] == Enum.ItemQuality.Superior then
        msg = msg.." *".._DestroyusProItems.ItemQualityToString(_G["DestroyusProItemQualityValue"]["rare"])
        allDisabled = false
     end
-    if _G["DestroyusProItemQualityValue"]["epic"] == LE_ITEM_QUALITY_EPIC then
+    if _G["DestroyusProItemQualityValue"]["epic"] == Enum.ItemQuality.Epic then
        msg = msg.." *".._DestroyusProItems.ItemQualityToString(_G["DestroyusProItemQualityValue"]["epic"])
        allDisabled = false
     end
@@ -127,7 +127,7 @@ function _DestroyusProManager.LoadAddonData(self, event, addonName)
         end
         if _G["DestroyusProItemQualityValue"] == nil then
             _G["DestroyusProItemQualityValue"] = {}
-            _G["DestroyusProItemQualityValue"]["uncommon"] = LE_ITEM_QUALITY_UNCOMMON
+            _G["DestroyusProItemQualityValue"]["uncommon"] = Enum.ItemQuality.Good
             _G["DestroyusProItemQualityValue"]["rare"] = nil
             _G["DestroyusProItemQualityValue"]["epic"] = nil
         end
