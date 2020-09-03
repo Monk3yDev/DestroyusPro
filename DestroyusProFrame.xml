@@ -1,7 +1,7 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\..\FrameXML\UI.xsd">
   <Script file="DestroyusProManagerUI.lua"/>
-  <Frame name="_DestroyusProManagerFrame" parent="UIParent" hidden="true" frameStrata="BACKGROUND">
+  <Frame name="DestroyusProPanelTemplate" virtual="true" hidden="true" frameStrata="BACKGROUND" parent="UIParent">
     <Size x="500" y="438"/>
     <Anchors>
       <Anchor point="CENTER"/>
@@ -10,30 +10,28 @@
       <EdgeSize>
         <AbsValue val="16"/>
       </EdgeSize>
-      <TileSize>
-        <AbsValue val="16"/>
-      </TileSize>
       <BackgroundInsets>
         <AbsInset left="4" right="4" top="4" bottom="4"/>
       </BackgroundInsets>
     </Backdrop>
+  </Frame>
+  <Frame name="DestroyusProPanelTileTemplate" virtual="true">
+    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
+      <EdgeSize>
+        <AbsValue val="16"/>
+      </EdgeSize>
+      <BackgroundInsets>
+        <AbsInset left="4" right="4" top="4" bottom="4"/>
+      </BackgroundInsets>
+    </Backdrop>
+  </Frame>
+  <Frame name="_DestroyusProManagerFrame" inherits="DestroyusProPanelTemplate">
     <Frames>
-      <Frame name="_DestroyusProTitleFrame" parent="_DestroyusProManagerFrame">
+      <Frame name="_DestroyusProTitleFrame" parent="_DestroyusProManagerFrame" inherits="DestroyusProPanelTileTemplate">
         <Anchors>
           <Anchor point="TOPLEFT" x="8" y="-8"/>
           <Anchor point="BOTTOMRIGHT" x="-8" y="390"/>
         </Anchors>
-        <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
-          <EdgeSize>
-            <AbsValue val="16"/>
-          </EdgeSize>
-          <TileSize>
-            <AbsValue val="16"/>
-          </TileSize>
-          <BackgroundInsets>
-            <AbsInset left="4" right="4" top="4" bottom="4"/>
-          </BackgroundInsets>
-        </Backdrop>
         <Layers>
           <Layer level="ARTWORK">
             <FontString text="DestroyusPro 1.1.0" inherits="GameFontNormalLarge">
@@ -45,22 +43,11 @@
           </Layer>
         </Layers>
       </Frame>
-      <Frame name="_DestroyusProSettingsFrame" parent="_DestroyusProManagerFrame" frameStrata="BACKGROUND">
+      <Frame name="_DestroyusProSettingsFrame" parent="_DestroyusProManagerFrame" inherits="DestroyusProPanelTileTemplate">
         <Anchors>
             <Anchor point="TOPLEFT" x="8" y="-75" />
             <Anchor point="BOTTOMRIGHT" x="-8" y="35"/>
         </Anchors>
-        <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
-          <EdgeSize>
-            <AbsValue val="16"/>
-          </EdgeSize>
-          <TileSize>
-            <AbsValue val="16"/>
-          </TileSize>
-          <BackgroundInsets>
-            <AbsInset left="4" right="4" top="4" bottom="4"/>
-          </BackgroundInsets>
-        </Backdrop>
         <Layers>
           <Layer level="ARTWORK">
             <FontString text="Settings" inherits="GameFontNormalLarge">
