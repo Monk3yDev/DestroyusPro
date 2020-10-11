@@ -1,29 +1,24 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
 ..\..\FrameXML\UI.xsd">
   <Script file="DestroyusProManagerUI.lua"/>
-  <Frame name="DestroyusProPanelTemplate" virtual="true" hidden="true" frameStrata="BACKGROUND" parent="UIParent">
+
+  <Frame name="DestroyusProPanelTemplate" inherits="BackdropTemplate" virtual="true" hidden="true" frameStrata="BACKGROUND" parent="UIParent">
     <Size x="500" y="438"/>
     <Anchors>
       <Anchor point="CENTER"/>
     </Anchors>
-    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border" bgFile="Interface\FrameGeneral\UI-Background-Marble">
-      <EdgeSize>
-        <AbsValue val="16"/>
-      </EdgeSize>
-      <BackgroundInsets>
-        <AbsInset left="4" right="4" top="4" bottom="4"/>
-      </BackgroundInsets>
-    </Backdrop>
+    <KeyValues>
+      <KeyValue key="backdropInfo" value="_DestroyusProBackdrop.BACKDROP_TOOLTIP_PANEL" type="global"/>
+      <KeyValue key="backdropBorderColor" value="TOOLTIP_DEFAULT_COLOR" type="global"/>
+    </KeyValues>
   </Frame>
-  <Frame name="DestroyusProPanelTileTemplate" virtual="true">
-    <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
-      <EdgeSize>
-        <AbsValue val="16"/>
-      </EdgeSize>
-      <BackgroundInsets>
-        <AbsInset left="4" right="4" top="4" bottom="4"/>
-      </BackgroundInsets>
-    </Backdrop>
+
+  <Frame name="DestroyusProPanelTileTemplate" inherits="BackdropTemplate" virtual="true">
+    <KeyValues>
+      <KeyValue key="backdropInfo" value="_DestroyusProBackdrop.BACKDROP_TOOLTIP_TILE" type="global"/>
+      <KeyValue key="backdropColor" value="TOOLTIP_DEFAULT_BACKGROUND_COLOR" type="global"/>
+      <KeyValue key="backdropBorderColor" value="TOOLTIP_DEFAULT_COLOR" type="global"/>
+    </KeyValues>
   </Frame>
   <Frame name="_DestroyusProManagerFrame" inherits="DestroyusProPanelTemplate">
     <Frames>
@@ -118,10 +113,10 @@
             <Scripts>
               <OnClick>
                 _DestroyusProManagerUI.ChangeQualityDisenchanting(self:GetChecked(),
-                                                                  "uncommon", Enum.ItemQuality.Good)
+                                                                  "uncommon", Enum.ItemQuality.Uncommon)
               </OnClick>
               <OnShow>
-                self:SetChecked(_G["DestroyusProItemQualityValue"]["uncommon"] == Enum.ItemQuality.Good)
+                self:SetChecked(_G["DestroyusProItemQualityValue"]["uncommon"] == Enum.ItemQuality.Uncommon)
               </OnShow>
             </Scripts>
           </CheckButton >
@@ -141,10 +136,10 @@
             <Scripts>
               <OnClick>
                 _DestroyusProManagerUI.ChangeQualityDisenchanting(self:GetChecked(),
-                                                                  "rare", Enum.ItemQuality.Superior)
+                                                                  "rare", Enum.ItemQuality.Rare)
               </OnClick>
               <OnShow>
-                self:SetChecked(_G["DestroyusProItemQualityValue"]["rare"] == Enum.ItemQuality.Superior)
+                self:SetChecked(_G["DestroyusProItemQualityValue"]["rare"] == Enum.ItemQuality.Rare)
               </OnShow>
             </Scripts>
           </CheckButton >

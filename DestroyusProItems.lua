@@ -182,9 +182,9 @@ end
 
 -- Convert number to global strings
 function _DestroyusProItems.ItemQualityToString(quality)
-    if quality == Enum.ItemQuality.Good then
+    if quality == Enum.ItemQuality.Uncommon then
         return ITEM_QUALITY2_DESC
-    elseif quality == Enum.ItemQuality.Superior then
+    elseif quality == Enum.ItemQuality.Rare then
         return ITEM_QUALITY3_DESC
     elseif quality == Enum.ItemQuality.Epic then
         return ITEM_QUALITY4_DESC

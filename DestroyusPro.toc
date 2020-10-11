@@ -1,4 +1,4 @@
-## Interface: 80300
+## Interface: 90001
 ## Title: DestroyusPro! 1.1.0
 ## Author: Monk3yDev
 ## Version: 1.1.0
@@ -19,4 +19,5 @@ DestroyusProWhiteList.lua
 DestroyusPro.lua
 DestroyusProManagerUI.lua
 DestroyusProSlashCommand.lua
+DestroyusProBackdrop.lua
 DestroyusProFrame.xml
