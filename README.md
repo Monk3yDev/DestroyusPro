@@ -39,6 +39,7 @@ To use properly mass techniques "calibration" of the actual learned recipes must
 - Whitelist is activated per character
 - Blacklist is activated in global scope
 - ItemID can be added or removed from blacklist/whitelist in addon panel by drag and drop item from inventory
+- Not all items which can not be disenchant are predefined in default blacklist
 
 ## How open addon panel
 
