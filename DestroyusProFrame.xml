@@ -2,7 +2,7 @@
 ..\..\FrameXML\UI.xsd">
   <Script file="DestroyusProManagerUI.lua"/>
 
-  <Frame name="DestroyusProPanelTemplate" inherits="BackdropTemplate" virtual="true" hidden="true" frameStrata="BACKGROUND" parent="UIParent">
+  <Frame name="DestroyusProPanelTemplate" inherits="BackdropTemplate" virtual="true" hidden="true" frameStrata="BACKGROUND" parent="UIParent" enableMouse="true" movable="true">
     <Size x="500" y="438"/>
     <Anchors>
       <Anchor point="CENTER"/>
@@ -11,6 +11,13 @@
       <KeyValue key="backdropInfo" value="_DestroyusProBackdrop.BACKDROP_TOOLTIP_PANEL" type="global"/>
       <KeyValue key="backdropBorderColor" value="TOOLTIP_DEFAULT_COLOR" type="global"/>
     </KeyValues>
+    <Scripts>
+      <OnLoad inherit="prepend">
+          self:RegisterForDrag("LeftButton")
+      </OnLoad>
+      <OnDragStart>self:StartMoving()</OnDragStart>
+      <OnDragStop>self:StopMovingOrSizing()</OnDragStop>
+    </Scripts>
   </Frame>
 
   <Frame name="DestroyusProPanelTileTemplate" inherits="BackdropTemplate" virtual="true">
@@ -29,7 +36,7 @@
         </Anchors>
         <Layers>
           <Layer level="ARTWORK">
-            <FontString text="DestroyusPro 1.1.0" inherits="GameFontNormalLarge">
+            <FontString text="DestroyusPro 1.1.1" inherits="GameFontNormalLarge">
               <Anchors>
                 <Anchor point="TOPLEFT"/>
                 <Anchor point="BOTTOMRIGHT"/>
