@@ -5,11 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## New version 1.1.1 - 27.11.2020 Shadowlands
+## New version 1.1.1 - 18.11.2020 Shadowlands 9.0.2
 
 ### Changed in 1.1.1
 
 - Window /despro can now be dragged
+- Uplift to 9.0.2
 
 ## New version 1.1.0 - 13.09.2020 Shadowlands PrePatch
 
