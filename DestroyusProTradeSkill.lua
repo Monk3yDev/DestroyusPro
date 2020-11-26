@@ -118,7 +118,7 @@ end
 -- Check if spellID is on the list
 function _DestroyusProTradeSkill.IsSpellOnList(spellID, spells)
     for i = 1, #spells do
-        if spells[i] == newSpellID then
+        if spells[i] == spellID then
             return true
         end
     end
