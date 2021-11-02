@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## New version 1.1.3 - 30.06.2021 Shadowlands 9.1.0
+
+### Changed in 1.1.3
+
+- Uplift to 9.1.0
+
 ## New version 1.1.2 - 10.03.2021 Shadowlands 9.0.5
 
 ### Changed in 1.1.2
