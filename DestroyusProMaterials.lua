@@ -11,6 +11,7 @@ _DestroyusProAddMaterial(_DestroyusProHerbs, 168586, "Rising Glory", _DestroyusP
 _DestroyusProAddMaterial(_DestroyusProHerbs, 170554, "Vigil's Torch", _DestroyusProSpellID.MASS_MILL_VIGILTORCH, _DestroyusProExpansionID.SHADOWLANDS)
 _DestroyusProAddMaterial(_DestroyusProHerbs, 168583, "Widowbloom", _DestroyusProSpellID.MASS_MILL_WIDOWBLOOM, _DestroyusProExpansionID.SHADOWLANDS)
 _DestroyusProAddMaterial(_DestroyusProHerbs, 171315, "Nightshade", _DestroyusProSpellID.MASS_MILL_NIGHTSHADE, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProHerbs, 187699, "First Flower", _DestroyusProSpellID.MASS_MILL_FIRSTFLOWER, _DestroyusProExpansionID.SHADOWLANDS)
 
 -- Battle for Azeroth
 _DestroyusProAddMaterial(_DestroyusProHerbs, 152510, "Anchor Weed", _DestroyusProSpellID.MASS_MILL_ANCHORWEED, _DestroyusProExpansionID.BFA)
@@ -108,6 +109,7 @@ _DestroyusProAddMaterial(_DestroyusProOres, 171831, "Phaedrum Ore", _DestroyusPr
 _DestroyusProAddMaterial(_DestroyusProOres, 171832, "Sinvyr Ore", _DestroyusProSpellID.MASS_PROSPECT_SINVYR, _DestroyusProExpansionID.SHADOWLANDS)
 _DestroyusProAddMaterial(_DestroyusProOres, 171829, "Solenium Ore", _DestroyusProSpellID.MASS_PROSPECT_SOLENIUM, _DestroyusProExpansionID.SHADOWLANDS)
 _DestroyusProAddMaterial(_DestroyusProOres, 171833, "Elethium Ore", _DestroyusProSpellID.MASS_PROSPECT_ELETHIUM, _DestroyusProExpansionID.SHADOWLANDS)
+_DestroyusProAddMaterial(_DestroyusProOres, 187700, "Progenium Ore", _DestroyusProSpellID.MASS_PROSPECT_PROGENIUM, _DestroyusProExpansionID.SHADOWLANDS)
 
 -- Battle for Azeroth
 _DestroyusProAddMaterial(_DestroyusProOres, 152513, "Platinum Ore", _DestroyusProSpellID.MASS_PROSPECT_PLATINUM, _DestroyusProExpansionID.BFA)

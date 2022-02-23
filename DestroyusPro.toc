@@ -1,7 +1,7 @@
-## Interface: 90105
-## Title: DestroyusPro! 1.1.4
+## Interface: 90200
+## Title: DestroyusPro! 1.1.5
 ## Author: Monk3yDev
-## Version: 1.1.4
+## Version: 1.1.5
 ## Notes: Search and disenchant, mill, prospect materials from the the bag!
 ## SavedVariables: DestroyusProItemQualityValue
 ## SavedVariables: DestroyusProPrintOutState

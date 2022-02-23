@@ -53,6 +53,7 @@ _DestroyusProSpellID.MASS_MILL_RISINGGLORY = 311417
 _DestroyusProSpellID.MASS_MILL_VIGILTORCH = 311414
 _DestroyusProSpellID.MASS_MILL_WIDOWBLOOM = 311415
 _DestroyusProSpellID.MASS_MILL_NIGHTSHADE = 311418
+_DestroyusProSpellID.MASS_MILL_FIRSTFLOWER = 359490
 
 -- Shadowlands Mass Prospecting
 _DestroyusProSpellID.MASS_PROSPECT_LAESTRITE = 311948
@@ -61,6 +62,7 @@ _DestroyusProSpellID.MASS_PROSPECT_PHAEDRUM = 311951
 _DestroyusProSpellID.MASS_PROSPECT_SINVYR = 311952
 _DestroyusProSpellID.MASS_PROSPECT_SOLENIUM = 311949
 _DestroyusProSpellID.MASS_PROSPECT_ELETHIUM = 311953
+_DestroyusProSpellID.MASS_PROSPECT_PROGENIUM = 359492
 
 -- Additional frame types. Needed during creation action for macro
 _DestroyusProFrameType = {}
