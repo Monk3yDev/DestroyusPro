@@ -31,7 +31,9 @@ _DestroyusProMacro.isCombatModeOn = false
 function _DestroyusProMacro.ManageMacro(action, macro, icon, content)
     if not _DestroyusProMacro.isCombatModeOn then
         if action == _DestroyusProMacro.CREATE then
-            _DestroyusProMacro.CreateMacro(macro, icon, "/click " .. content)
+            buttonValue = GetCVar("ActionButtonUseKeyDown")
+            macroContent = string.format("/click %s LeftButton %d", content, buttonValue)
+            _DestroyusProMacro.CreateMacro(macro, icon, macroContent)
         elseif action == _DestroyusProMacro.DELETE then
             _DestroyusProMacro.DeleteMacro(macro)
         end

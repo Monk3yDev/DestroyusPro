@@ -1,4 +1,4 @@
-## Interface: 90200
+## Interface: 100002
 ## Title: DestroyusPro! 1.1.5
 ## Author: Monk3yDev
 ## Version: 1.1.5

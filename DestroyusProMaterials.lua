@@ -227,7 +227,7 @@ function _DestroyusProMaterials.CountMaterials(materials)
         data.totalStackCount = 0
     end
     for bagID = 0, NUM_BAG_SLOTS do
-        for slotIndex = 1, GetContainerNumSlots(bagID) do
+        for slotIndex = 1, C_Container.GetContainerNumSlots(bagID) do
             local itemLocation = ItemLocation:CreateFromBagAndSlot(bagID, slotIndex)
             if C_Item.DoesItemExist(itemLocation) then
                 local itemID = C_Item.GetItemID(itemLocation)

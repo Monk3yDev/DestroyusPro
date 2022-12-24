@@ -84,6 +84,7 @@ function _DestroyusProManager.CreateMacroFrame(buttonName, buttonType, spellID, 
         buttonFrame:SetScript("PreClick", _DestroyusProManager.CreateButtonPreClickCallback(spellID, professionID, expansionID))
         -- No action needed for PostClick event
     end
+    buttonFrame:RegisterForClicks("AnyUp", "AnyDown")
     buttonFrame:RegisterEvent("PLAYER_REGEN_DISABLED")
     buttonFrame:RegisterEvent("PLAYER_REGEN_ENABLED")
     buttonFrame:SetScript("OnEvent", _DestroyusProManager.CombatModeCallback)
@@ -172,7 +173,7 @@ function _DestroyusProMain.FindItemToWork(professionID)
     local Operation = _DestroyusProMain.SelectMacroOperation(professionID)
     if _DestroyusProTradeSkill.IsTradeSkillLearned(professionID) then
         for bagID = 0, NUM_BAG_SLOTS do
-            for slotIndex = 1, GetContainerNumSlots(bagID) do
+            for slotIndex = 1, C_Container.GetContainerNumSlots(bagID) do
                 if Operation(bagID, slotIndex) then
                     local itemLink = C_Item.GetItemLink(ItemLocation:CreateFromBagAndSlot(bagID, slotIndex))
                     return {bagID=bagID, slotIndex=slotIndex, itemLink=itemLink}

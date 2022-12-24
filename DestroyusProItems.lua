@@ -27,6 +27,11 @@ _DestroyusProItems.CROSSBOWS_SUBCLASS_ID = 18
 _DestroyusProItems.GEMS_CLASS_ID = 3
 _DestroyusProItems.ARTIFACT_RELIC_SUBCLASS_ID = 11
 
+
+_DestroyusProItems.PROFESSION_CLASS_ID = 19
+_DestroyusProItems.PROFESSION_ACCESSORY_CLASS_ID = 11
+_DestroyusProItems.PROFESSION_TOOL_CLASS_ID = 7
+
 _DestroyusProItems.INVTYPE_TRINKET = "INVTYPE_TRINKET"
 _DestroyusProItems.INVTYPE_NECK = "INVTYPE_NECK"
 _DestroyusProItems.INVTYPE_FINGER = "INVTYPE_FINGER"
@@ -59,6 +64,8 @@ _DestroyusProAddItem(_DestroyusProItems.WEAPONS_CLASS_ID, _DestroyusProItems.FIS
 _DestroyusProAddItem(_DestroyusProItems.WEAPONS_CLASS_ID, _DestroyusProItems.DAGGERS_SUBCLASS_ID)
 _DestroyusProAddItem(_DestroyusProItems.WEAPONS_CLASS_ID, _DestroyusProItems.WANDS_SUBCLASS_ID)
 _DestroyusProAddItem(_DestroyusProItems.WEAPONS_CLASS_ID, _DestroyusProItems.CROSSBOWS_SUBCLASS_ID)
+_DestroyusProAddItem(_DestroyusProItems.PROFESSION_CLASS_ID, _DestroyusProItems.PROFESSION_ACCESSORY_CLASS_ID)
+_DestroyusProAddItem(_DestroyusProItems.PROFESSION_CLASS_ID, _DestroyusProItems.PROFESSION_TOOL_CLASS_ID)
 _DestroyusProAddItem(_DestroyusProItems.GEMS_CLASS_ID, _DestroyusProItems.ARTIFACT_RELIC_SUBCLASS_ID)
 
 -- Check if item belong to specific class and subclass
