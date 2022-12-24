@@ -3,7 +3,7 @@
   <Script file="DestroyusProManagerUI.lua"/>
 
   <Frame name="DestroyusProPanelTemplate" inherits="BackdropTemplate" virtual="true" hidden="true" frameStrata="BACKGROUND" parent="UIParent" enableMouse="true" movable="true">
-    <Size x="500" y="438"/>
+    <Size x="400" y="348"/>
     <Anchors>
       <Anchor point="CENTER"/>
     </Anchors>
@@ -32,11 +32,11 @@
       <Frame name="_DestroyusProTitleFrame" parent="_DestroyusProManagerFrame" inherits="DestroyusProPanelTileTemplate">
         <Anchors>
           <Anchor point="TOPLEFT" x="8" y="-8"/>
-          <Anchor point="BOTTOMRIGHT" x="-8" y="390"/>
+          <Anchor point="BOTTOMRIGHT" x="-8" y="300"/>
         </Anchors>
         <Layers>
           <Layer level="ARTWORK">
-            <FontString text="DestroyusPro 1.1.5" inherits="GameFontNormalLarge">
+            <FontString text="DestroyusPro 2.0.0" inherits="GameFontNormalLarge">
               <Anchors>
                 <Anchor point="TOPLEFT"/>
                 <Anchor point="BOTTOMRIGHT"/>
@@ -179,34 +179,6 @@
             </Anchors>
             <Layers>
               <Layer level="ARTWORK">
-                <FontString inherits="GameFontNormal" text="Prospecting">
-                  <Anchors>
-                    <Anchor point="LEFT" x="32" y="0"/>
-                  </Anchors>
-                </FontString>
-              </Layer>
-            </Layers>
-            <Scripts>
-              <OnClick>
-                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.PROSPECTING,
-                                                   _DestroyusProMacro.SMALL_ROCK,
-                                                   _DestroyusProButtonName.PROSPECTING)
-              </OnClick>
-              <OnLoad>
-                _DestroyusProManagerUI.RegisterEvents(self)
-                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.PROSPECTING)
-              </OnLoad>
-              <OnEvent>
-                _DestroyusProManagerUI.OnEventCallback(self, event)
-              </OnEvent>
-            </Scripts>
-          </CheckButton >
-          <CheckButton inherits="UICheckButtonTemplate">
-            <Anchors>
-              <Anchor point="TOP" x="-20" y="-120" />
-            </Anchors>
-            <Layers>
-              <Layer level="ARTWORK">
                 <FontString inherits="GameFontNormal" text="Disenchanting">
                   <Anchors>
                     <Anchor point="LEFT" x="32" y="0"/>
@@ -229,205 +201,9 @@
               </OnEvent>
             </Scripts>
           </CheckButton >
-          <CheckButton inherits="UICheckButtonTemplate">
-            <Anchors>
-              <Anchor point="TOPRIGHT" x="-80" y="-120" />
-            </Anchors>
-            <Layers>
-              <Layer level="ARTWORK">
-                <FontString inherits="GameFontNormal" text="Milling">
-                  <Anchors>
-                    <Anchor point="LEFT" x="32" y="0"/>
-                  </Anchors>
-                </FontString>
-              </Layer>
-            </Layers>
-            <Scripts>
-              <OnClick>
-                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MILLING,
-                                                   _DestroyusProMacro.RED_BOWL,
-                                                   _DestroyusProButtonName.MILLING)
-              </OnClick>
-              <OnLoad>
-                _DestroyusProManagerUI.RegisterEvents(self)
-                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MILLING)
-              </OnLoad>
-              <OnEvent>
-                _DestroyusProManagerUI.OnEventCallback(self, event)
-              </OnEvent>
-            </Scripts>
-          </CheckButton >
-          <CheckButton inherits="UICheckButtonTemplate">
-            <Anchors>
-              <Anchor point="TOPLEFT" x="4" y="-146" />
-            </Anchors>
-            <Layers>
-              <Layer level="ARTWORK">
-                <FontString inherits="GameFontNormal" text="Mass Milling Legion">
-                  <Anchors>
-                    <Anchor point="LEFT" x="32" y="0"/>
-                  </Anchors>
-                </FontString>
-              </Layer>
-            </Layers>
-            <Scripts>
-              <OnClick>
-                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MASS_MILLING_LEGION,
-                                                   _DestroyusProMacro.BLUE_BOWL,
-                                                   _DestroyusProButtonName.MASS_MILLING_LEGION)
-              </OnClick>
-              <OnLoad>
-                _DestroyusProManagerUI.RegisterEvents(self)
-                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MASS_MILLING_LEGION)
-              </OnLoad>
-              <OnEvent>
-                _DestroyusProManagerUI.OnEventCallback(self, event)
-              </OnEvent>
-            </Scripts>
-          </CheckButton >
-          <CheckButton inherits="UICheckButtonTemplate">
-            <Anchors>
-              <Anchor point="TOP" x="-20" y="-146" />
-            </Anchors>
-            <Layers>
-              <Layer level="ARTWORK">
-                <FontString inherits="GameFontNormal" text="Mass Prospecting Legion">
-                  <Anchors>
-                    <Anchor point="LEFT" x="32" y="0"/>
-                  </Anchors>
-                </FontString>
-              </Layer>
-            </Layers>
-            <Scripts>
-              <OnClick>
-                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MASS_PROSPECTING_LEGION,
-                                                   _DestroyusProMacro.GROUP_OF_SMALL_ROCKS,
-                                                   _DestroyusProButtonName.MASS_PROSPECTING_LEGION)
-              </OnClick>
-              <OnLoad>
-                _DestroyusProManagerUI.RegisterEvents(self)
-                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MASS_PROSPECTING_LEGION)
-              </OnLoad>
-              <OnEvent>
-                _DestroyusProManagerUI.OnEventCallback(self, event)
-              </OnEvent>
-            </Scripts>
-          </CheckButton >
-          <CheckButton inherits="UICheckButtonTemplate">
-            <Anchors>
-              <Anchor point="TOPLEFT" x="4" y="-172" />
-            </Anchors>
-            <Layers>
-              <Layer level="ARTWORK">
-                <FontString inherits="GameFontNormal" text="Mass Milling Azeroth">
-                  <Anchors>
-                    <Anchor point="LEFT" x="32" y="0"/>
-                  </Anchors>
-                </FontString>
-              </Layer>
-            </Layers>
-            <Scripts>
-              <OnClick>
-                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MASS_MILLING_AZEROTH,
-                                                   _DestroyusProMacro.BOX_WITH_RED_DUST,
-                                                   _DestroyusProButtonName.MASS_MILLING_AZEROTH)
-              </OnClick>
-              <OnLoad>
-                _DestroyusProManagerUI.RegisterEvents(self)
-                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MASS_MILLING_AZEROTH)
-              </OnLoad>
-              <OnEvent>
-                _DestroyusProManagerUI.OnEventCallback(self, event)
-              </OnEvent>
-            </Scripts>
-          </CheckButton >
-          <CheckButton inherits="UICheckButtonTemplate">
-            <Anchors>
-              <Anchor point="TOP" x="-20" y="-172" />
-            </Anchors>
-            <Layers>
-              <Layer level="ARTWORK">
-                <FontString inherits="GameFontNormal" text="Mass Prospecting Azeroth">
-                  <Anchors>
-                   <Anchor point="LEFT" x="32" y="0"/>
-                  </Anchors>
-                </FontString>
-              </Layer>
-            </Layers>
-            <Scripts>
-              <OnClick>
-                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MASS_PROSPECTING_AZEROTH,
-                                                   _DestroyusProMacro.BROWN_DUST,
-                                                   _DestroyusProButtonName.MASS_PROSPECTING_AZEROTH)
-              </OnClick>
-              <OnLoad>
-                _DestroyusProManagerUI.RegisterEvents(self)
-                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MASS_PROSPECTING_AZEROTH)
-              </OnLoad>
-              <OnEvent>
-                _DestroyusProManagerUI.OnEventCallback(self, event)
-              </OnEvent>
-            </Scripts>
-          </CheckButton >
-                    <CheckButton inherits="UICheckButtonTemplate">
-            <Anchors>
-              <Anchor point="TOPLEFT" x="4" y="-198" />
-            </Anchors>
-            <Layers>
-              <Layer level="ARTWORK">
-                <FontString inherits="GameFontNormal" text="Mass Milling Shadowlands">
-                  <Anchors>
-                    <Anchor point="LEFT" x="32" y="0"/>
-                  </Anchors>
-                </FontString>
-              </Layer>
-            </Layers>
-            <Scripts>
-              <OnClick>
-                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MASS_MILLING_SHADOWLANDS,
-                                                   _DestroyusProMacro.BLACK_BOWL,
-                                                   _DestroyusProButtonName.MASS_MILLING_SHADOWLANDS)
-              </OnClick>
-              <OnLoad>
-                _DestroyusProManagerUI.RegisterEvents(self)
-                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MASS_MILLING_SHADOWLANDS)
-              </OnLoad>
-              <OnEvent>
-                _DestroyusProManagerUI.OnEventCallback(self, event)
-              </OnEvent>
-            </Scripts>
-          </CheckButton >
-          <CheckButton inherits="UICheckButtonTemplate">
-            <Anchors>
-              <Anchor point="TOP" x="-20" y="-198" />
-            </Anchors>
-            <Layers>
-              <Layer level="ARTWORK">
-                <FontString inherits="GameFontNormal" text="Mass Prospecting Shadowlands">
-                  <Anchors>
-                   <Anchor point="LEFT" x="32" y="0"/>
-                  </Anchors>
-                </FontString>
-              </Layer>
-            </Layers>
-            <Scripts>
-              <OnClick>
-                _DestroyusProManagerUI.CreateMacro(self:GetChecked(), _DestroyusProMacro.MASS_PROSPECTING_SHADOWLANDS,
-                                                   _DestroyusProMacro.WHITE_ROCKS,
-                                                   _DestroyusProButtonName.MASS_PROSPECTING_SHADOWLANDS)
-              </OnClick>
-              <OnLoad>
-                _DestroyusProManagerUI.RegisterEvents(self)
-                _DestroyusProManagerUI.InjectMacroName(self, _DestroyusProMacro.MASS_PROSPECTING_SHADOWLANDS)
-              </OnLoad>
-              <OnEvent>
-                _DestroyusProManagerUI.OnEventCallback(self, event)
-              </OnEvent>
-            </Scripts>
-          </CheckButton >
           <Button name="DisplayIconButton" inherits="GiantItemButtonTemplate">
             <Anchors>
-              <Anchor point="TOPLEFT" x="8" y="-260" />
+              <Anchor point="TOPLEFT" x="8" y="-172" />
             </Anchors>
             <Scripts>
             <OnClick>
@@ -463,7 +239,7 @@
           <Layer level="ARTWORK">
             <FontString inherits="GameFontWhite" text="Add or Remove item from active list">
               <Anchors>
-                <Anchor point="TOPLEFT" x="8" y="-240"/>
+                <Anchor point="TOPLEFT" x="8" y="-156"/>
               </Anchors>
             </FontString>
           </Layer>
@@ -482,21 +258,10 @@
           </OnClick>
         </Scripts>
       </Button>
-      <Button parentKey="CalibrationButton" inherits="UIPanelButtonTemplate" text="Calibration">
-        <Size x="110" y="22"/>
-        <Anchors>
-          <Anchor point="RIGHT" relativeKey="$parent.OkayButton" relativePoint="LEFT"/>
-        </Anchors>
-        <Scripts>
-          <OnClick>
-            _DestroyusProMain.StartCalibration()
-          </OnClick>
-        </Scripts>
-      </Button>
       <Button parentKey="AddItemButton" inherits="UIPanelButtonTemplate" text="Add item">
         <Size x="110" y="22"/>
         <Anchors>
-          <Anchor point="RIGHT" relativeKey="$parent.CalibrationButton" relativePoint="LEFT"/>
+          <Anchor point="RIGHT" relativeKey="$parent.OkayButton" relativePoint="LEFT"/>
         </Anchors>
         <Scripts>
           <OnClick>

@@ -1,17 +1,15 @@
 ## Interface: 100002
-## Title: DestroyusPro! 1.1.5
+## Title: DestroyusPro! 2.0.0
 ## Author: Monk3yDev
-## Version: 1.1.5
-## Notes: Search and disenchant, mill, prospect materials from the the bag!
+## Version: 2.0.0
+## Notes: Search and disenchant items from the the bag!
 ## SavedVariables: DestroyusProItemQualityValue
 ## SavedVariables: DestroyusProPrintOutState
 ## SavedVariables: DestroyusProBlackList
-## SavedVariablesPerCharacter: DestroyusProSpellsID
 ## SavedVariablesPerCharacter: DestroyusProWhiteList
 DestroyusProConstants.lua
 DestroyusProMacro.lua
 DestroyusProUtils.lua
-DestroyusProMaterials.lua
 DestroyusProTradeSkill.lua
 DestroyusProItems.lua
 DestroyusProBlackList.lua
