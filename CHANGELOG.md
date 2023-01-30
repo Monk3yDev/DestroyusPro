@@ -5,6 +5,12 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## New version 2.0.1 - 30.01.2022 Dragonflight 10.0.5
+
+### Changed in 2.0.1
+
+- Uplift to 10.0.5
+
 ## New version 2.0.0 - 24.12.2022 Dragonflight 10.0.2
 
 ### Changed in 2.0.0

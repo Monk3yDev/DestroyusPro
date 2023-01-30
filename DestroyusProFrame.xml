@@ -36,7 +36,7 @@
         </Anchors>
         <Layers>
           <Layer level="ARTWORK">
-            <FontString text="DestroyusPro 2.0.0" inherits="GameFontNormalLarge">
+            <FontString text="DestroyusPro 2.0.1" inherits="GameFontNormalLarge">
               <Anchors>
                 <Anchor point="TOPLEFT"/>
                 <Anchor point="BOTTOMRIGHT"/>
